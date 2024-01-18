@@ -72,6 +72,7 @@ var event_handler = (event) => {
 [
     "visibilitychange",
     "webkitvisibilitychange",
+    "webkitvisiblitychange",
     "blur",
     "hasFocus",
     "mouseleave",
