@@ -58,8 +58,8 @@ var event_handler = (event) => {
             event.target.classList.contains('ql-editor')))) { // quill js fix
         return;
     }
-    // if the event is mouseleave or mouseout, and the target is an blacklisted type, block it
-    if (['mouseleave', 'mouseout', 'pointerleave' , 'pointerout'].includes(event.type) &&
+    // if the event is mouseleave or mouseout & pointerleave or pointerout, and the target is an blacklisted type, block it
+    if (['mouseleave', 'mouseout', 'pointerleave', 'pointerout'].includes(event.type) &&
         !hoverBlacklist.some(type => event.target instanceof type)) {
         return;
     }
