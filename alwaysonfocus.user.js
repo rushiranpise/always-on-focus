@@ -59,7 +59,7 @@ var event_handler = (event) => {
         return;
     }
     // if the event is mouseleave or mouseout, and the target is an blacklisted type, block it
-    if (['mouseleave', 'mouseout'].includes(event.type) &&
+    if (['mouseleave', 'mouseout', 'pointerleave' , 'pointerout'].includes(event.type) &&
         !hoverBlacklist.some(type => event.target instanceof type)) {
         return;
     }
@@ -77,6 +77,8 @@ var event_handler = (event) => {
     "hasFocus",
     "mouseleave",
     "mouseout",
+    "pointerleave",
+    "pointerout",
     "mozvisibilitychange",
     "msvisibilitychange"
 ].forEach(event_name => {
