@@ -26,14 +26,6 @@ unsafeWindow.window.onFocus = () => true;
 ].forEach(prop_name => {
     Object.defineProperty(document, prop_name, {value: false});
 })
-
-[
-    "fullscreenEnabled",
-    "fullscreen",
-    "fullscreenElement"
-].forEach(prop_name => {
-    Object.defineProperty(document, prop_name, {value: true});
-})
  
 Object.defineProperty(document, "visibilityState", {get: () => "visible"});
 Object.defineProperty(document, "webkitVisibilityState", {get: () => "visible"});
