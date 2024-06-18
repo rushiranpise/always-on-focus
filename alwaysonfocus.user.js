@@ -19,16 +19,16 @@ unsafeWindow.window.onFocus = () => true;
  
 // kill dom property names
 [
-    "hidden",
+    // "hidden",
     "mozHidden",
     "msHidden",
-    "webkitHidden"
+    // "webkitHidden"
 ].forEach(prop_name => {
     Object.defineProperty(document, prop_name, {value: false});
 })
  
-Object.defineProperty(document, "visibilityState", {get: () => "visible"});
-Object.defineProperty(document, "webkitVisibilityState", {get: () => "visible"});
+// Object.defineProperty(document, "visibilityState", {get: () => "visible"});
+// Object.defineProperty(document, "webkitVisibilityState", {get: () => "visible"});
  
 unsafeWindow.document.onvisibilitychange = undefined;
  
